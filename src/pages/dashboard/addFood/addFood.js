@@ -13,7 +13,6 @@ const AddFood = () => {
         newData[key] = value;
         setProductData(newData);
     }
-    // https://safe-ocean-22917.herokuapp.com/
 
     const handleSubmit = e => {
         e.preventDefault();
