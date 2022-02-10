@@ -24,7 +24,7 @@ const ManageAllFoods = () => {
 
     useEffect(() => {
         setDataLoading(true);
-        axios.get(`http://localhost:5000/all-foods?currentPage=${currentPage}&&size=${size}`)
+        axios.get(`https://floating-plains-90114.herokuapp.com/all-foods?currentPage=${currentPage}&&size=${size}`)
             .then((response) => {
                 setAllFoods(response.data.allFoods);
                 const totalPageNumber = Math.ceil(response.data.count / size);
@@ -53,7 +53,7 @@ const ManageAllFoods = () => {
         })
             .then((value) => {
                 if (value) {
-                    axios.delete(`http://localhost:5000/delete-single-food?foodId=${id}`)
+                    axios.delete(`https://floating-plains-90114.herokuapp.com/delete-single-food?foodId=${id}`)
                         .then((response) => {
                             if (response.data.deletedCount) {
                                 swal({

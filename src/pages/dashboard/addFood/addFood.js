@@ -14,11 +14,11 @@ const AddFood = () => {
         setProductData(newData);
     }
     // https://safe-ocean-22917.herokuapp.com/
-    // http://localhost:5000/
+
     const handleSubmit = e => {
         e.preventDefault();
 
-        axios.post(`http://localhost:5000/add-food`, productData)
+        axios.post(`https://floating-plains-90114.herokuapp.com/add-food`, productData)
             .then((response) => {
                 if (response.data.insertedId) {
                     swal({
